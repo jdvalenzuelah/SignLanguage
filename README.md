@@ -1,2 +1,2 @@
 # SignLanguage
-Proyecto HCI
+Project of Human Interaction Computer
