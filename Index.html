@@ -1,0 +1,118 @@
+<html>
+<title>Marcos Gutierrez</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rancho&effect=anaglyph">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="indexStyle.css">
+views/profile.jpg
+<head>
+</head>
+<body class="w3-content w3-blue-gray w3-animate-opacity" style="max-width:2000px">
+
+<!-- Menu -->
+<nav class="w3-sidebar w3-bar-block w3-light-grey w3-collapse w3-top w3-animate-left" style="z-index:3;width:250px" id="mySidebar">
+  <div class="w3-container w3-display-container w3-padding-16">
+    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+    <a href="cv.html"><h3 class="w3-wide"><b>About Me</b></h3></a>
+  </div>
+  <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
+    <a href="experiencias.html" class="w3-bar-item w3-button">Experience</a>
+    <a href="educacion.html" class="w3-bar-item w3-button">Education</a>
+    <a href="voluntariado.html" class="w3-bar-item w3-button">Volunteering</a>
+  </div>
+
+</nav>
+
+<!-- Pantallas pequeñas -->
+<header class="w3-bar w3-top w3-hide-large w3-light-grey w3-xlarge">
+  <div class="w3-bar-item w3-padding-24 w3-wide">About Me</div>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+</header>
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Contenido -->
+<div class="w3-main" style="margin-left:250px">
+
+  <!-- celulares -->
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+
+
+  <header class="w3-container w3-center w3-padding-48 w3-black w3-animate-top" style="width:100%;">
+   <h1 class="w3-xxxlarge font-effect-anaglyph"><b> Marcos Gutierrez</b></h1>
+   <h6><span class="w3-tag">Estudiante de Ingenieria</span></h6>
+ </header>
+<br>
+<div class="w3-row w3-animate-right">
+  <div class="w3-half">
+    <div class="w3-display-container w3-container">
+      <img src="profile.jpg"style="width:100%">
+    </div>
+  </div>
+  <div class="w3-half">
+
+    <div class="w3-card-4"style="width:90%">
+      <header class="w3-container w3-black">
+        <h1>Objetivos</h1>
+      </header>
+      <div class="w3-container w3-light-grey">
+        <p>Poner en practica los conocimientos adquiridos durante mi carrera universitaria en búsqueda de mejorar la calidad de vida a traves de la ciencia de la computación y tecnologia.</p>
+      </div>
+    </div>
+    <br>
+    <div class="w3-card-4"style="width:90%">
+      <header class="w3-container w3-black">
+        <h1>Habilidades</h1>
+      </header>
+      <div class="w3-container w3-light-grey">
+        <p>Organizado y altamente comprometido. Conocimiento de la tecnologia. Buen estudiante Disfruto los deportes, en especial el futbol, me gusta ir al gimnasio y los video juegos. Conocimiento medio del idioma Ingles.</p>
+      </div>
+    </div>
+    <br>
+    <div class="w3-card-4"style="width:90%">
+      <header class="w3-container w3-black">
+        <h1>Contacto</h1>
+      </header>
+      <div class="w3-container w3-light-grey">
+        <p><i class="fas fa-envelope-square"></i> juanma2807@gmail.com</p>
+        <p><i class="fas fa-phone"></i> +502 4290-7884</p>
+        <p><a href="https://www.instagram.com/maaarcosg_/"><i class="fab fa-facebook"></i> https://www.instagram.com/maaarcosg_/ </a></p>
+        <p><a href="https://github.com/MaaarcosG"><i class="fab fa-github"></i> https://github.com/MaaarcosG</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+<script>
+// Accordion
+function myAccFunc() {
+    var x = document.getElementById("demoAcc");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+
+document.getElementById("myBtn").click();
+
+
+
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+</body>
+
+
+</html>
