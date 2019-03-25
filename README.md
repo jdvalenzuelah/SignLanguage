@@ -1,2 +1,2 @@
 # SignLanguage
-Project of Human Interaction Computer
+Project of Human Computer interaction
