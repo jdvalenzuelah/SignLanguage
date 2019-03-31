@@ -45,7 +45,7 @@ class main:
             self.head['text'] = "David Marica"
             self.head['pady'] = 150
         else:
-            ms.showerror('Oops!','cuenta no encontrada.')
+            ms.showerror('Oops!','La cuenta no se puede encontrar o no existe dicha cuenta.')
 
     def nuevoUsuario(self):
         with sqlite3.connect('cuentas.db') as db:
@@ -65,41 +65,45 @@ class main:
         db.commit()
 
 
-    def log(self):
+    def login(self):
         self.Usuario.set('')
         self.password.set('')
         self.crf.pack_forget()
-        self.head['text'] = 'LOGIN'
+        #self.head['text'] = 'LOGIN'
         self.logf.pack()
-    def cr(self):
+
+    def crear(self):
         self.usuarioNuevo.set('')
         self.nuevaPassword.set('')
         self.logf.pack_forget()
-        self.head['text'] = 'CREAR CUENTA'
+        self.head['text'] = '             CREAR CUENTA             '
         self.crf.pack()
 
 
     def widgets(self):
-        self.head = Label(self.master,text = 'LOGIN',font = ('',35),pady = 10)
+    	#Encabezado de la ventana para iniciar sesion
+        self.head = Label(self.master, text = '              INICIAR SESION            ', font = ('',20), pady = 10, bg='blue4', fg='white')
         self.head.pack()
-        self.logf = Frame(self.master,padx =10,pady = 10)
-        Label(self.logf,text = 'Usuario: ',font = ('',20),pady=5,padx=5).grid(sticky = W)
+        #Ventana principal
+        self.logf = Frame(self.master,padx =10,pady = 10, bg='white')
+        #Propiedades principales
+        Label(self.logf,text = 'Usuario: ',font = ('',20),pady=5,padx=5, bg='white', fg='black').grid(sticky = W)
         Entry(self.logf,textvariable = self.Usuario,bd = 5,font = ('',15)).grid(row=0,column=1)
-        Label(self.logf,text = 'Contraseña: ',font = ('',20),pady=5,padx=5).grid(sticky = W)
+        Label(self.logf,text = 'Contraseña: ',font = ('',20),pady=5,padx=5, bg='white', fg='black').grid(sticky = W)
         Entry(self.logf,textvariable = self.password,bd = 5,font = ('',15),show = '*').grid(row=1,column=1)
-        Button(self.logf,text = ' Login ',bd = 3 ,font = ('',15),padx=5,pady=5,command=self.login).grid()
-        Button(self.logf,text = ' Crear cuenta ',bd = 3 ,font = ('',15),padx=5,pady=5,command=self.cr).grid(row=2,column=1)
+        Button(self.logf,text = ' Crear cuenta ',bd = 3 ,font = ('',15),padx=5,pady=5,command=self.crear, bg='blue4', fg='white').grid()
+        Button(self.logf,text = ' Login ',bd = 3 ,font = ('',15),padx=5,pady=5,command=self.login, bg='blue4', fg='white').grid(row=2,column=1)
         self.logf.pack()
 
-        self.crf = Frame(self.master,padx =10,pady = 10)
-        Label(self.crf,text = 'usuario: ',font = ('',20),pady=5,padx=5).grid(sticky = W)
+        #Datos para la ventana de crear usuarios
+        self.crf = Frame(self.master,padx =10,pady = 10, bg='white')
+        #Propiedades para el ingreso de datos
+        Label(self.crf,text = 'Usuario: ',font = ('',20),pady=5,padx=5, bg='white', fg='black').grid(sticky = W)
         Entry(self.crf,textvariable = self.usuarioNuevo,bd = 5,font = ('',15)).grid(row=0,column=1)
-        Label(self.crf,text = 'Contraseña: ',font = ('',20),pady=5,padx=5).grid(sticky = W)
+        Label(self.crf,text = 'Contraseña: ',font = ('',20),pady=5,padx=5, bg='white', fg='black').grid(sticky = W)
         Entry(self.crf,textvariable = self.nuevaPassword,bd = 5,font = ('',15),show = '*').grid(row=1,column=1)
-        Button(self.crf,text = 'Crear cuenta',bd = 3 ,font = ('',15),padx=5,pady=5,command=self.nuevoUsuario).grid()
-        Button(self.crf,text = 'Ir a Login',bd = 3 ,font = ('',15),padx=5,pady=5,command=self.log).grid(row=2,column=1)
-
-
+        Button(self.crf,text = 'Crear cuenta',bd = 3 ,font = ('',15),padx=5,pady=5,command=self.nuevoUsuario, bg='blue4', fg='white').grid()
+        Button(self.crf,text = 'Ir a Login',bd = 3 ,font = ('',15),padx=5,pady=5,command=self.login, bg='blue4', fg='white').grid(row=2,column=1)
 
 #crear la ventana
 root = Tk()
