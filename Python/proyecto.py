@@ -45,7 +45,7 @@ class main:
             self.head['text'] = "David Marica"
             self.head['pady'] = 150
         else:
-            ms.showerror('Oops!','La cuenta no se puede encontrar o no existe dicha cuenta.')
+            ms.showerror('Oops!','La cuenta no se puede encontrar')
 
     def nuevoUsuario(self):
         with sqlite3.connect('cuentas.db') as db:
