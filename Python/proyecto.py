@@ -9,6 +9,7 @@ from tkinter import *
 from tkinter import messagebox as ms
 #base de datos
 import sqlite3
+import os
 
 #Conectamos con base de datos y creamos usuarios
 with sqlite3.connect('cuentas.db') as db:
@@ -41,9 +42,7 @@ class main:
         c.execute(find_user,[(self.Usuario.get()),(self.password.get())])
         result = c.fetchall()
         if result:
-            self.logf.pack_forget()
-            self.head['text'] = "David Marica"
-            self.head['pady'] = 150
+            os.system('start SignLAnguage/alfabeto.html')
         else:
             ms.showerror('Oops!','La cuenta no se puede encontrar')
 
