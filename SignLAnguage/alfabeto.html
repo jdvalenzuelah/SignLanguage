@@ -1,0 +1,55 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body onload="paginationFiller()">
+
+      <!--Page header-->
+      <nav class="top-nav">
+        <div class="nav-wrapper center">
+          <header class="header"> <font size="20"> Alfabeto </font> </header>
+        </div>
+      </nav>
+
+      <div>"\n"</div>
+
+      <!--Page Layout-->
+      <div class="row">
+
+        <div class="col s3">
+          <!--left NavBar-->
+          <div class="container">
+          	<p>sjhdakljashflkjshdfj</p>
+          </div>
+        </div>
+
+        <div class="col s9">
+          <!--Page content starts here-->
+          <div class="container">
+            <!--Image container-->
+            <img id="letter" class="materialboxed" src="media/A.jpg" width="650" height="800">
+          </div>
+          <!--Page navigation options-->
+          <ul class="pagination">
+            <li id="goLeft" class="waves-effect"><a href="#!"><i class="material-icons" onclick="changeImage('left')">chevron_left</i></a></li>
+            <li id ="pages"></li>
+            <li id="goRight" class="waves-effect"><a href="#!"><i class="material-icons" onclick="changeImage('right')">chevron_right</i></a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      
+      <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="js/functions.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+    </body>
+  </html>
