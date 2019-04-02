@@ -111,5 +111,5 @@ class main:
 #crear la ventana
 root = Tk()
 main(root)
-root.resizable(width=False, height=False)
+root.resizable(width=False, height=Flase)
 root.mainloop()

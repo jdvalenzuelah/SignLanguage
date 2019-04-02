@@ -40,7 +40,33 @@ var days = [
     {'day':'Jueves', 'image':'diasSemana/Jueves.gif'},
     {'day':'Viernes', 'image':'diasSemana/Viernes.gif'},
     {'day':'Sabado', 'image':'diasSemana/Sabado.gif'}
-]
+];
+
+var numbers = [
+    {'number':'1', 'image':'numeros/1.jpeg'},
+    {'number':'2', 'image':'numeros/2.jpeg'},
+    {'number':'3', 'image':'numeros/3.jpeg'},
+    {'number':'4', 'image':'numeros/4.jpeg'},
+    {'number':'5', 'image':'numeros/5.jpeg'},
+    {'number':'6', 'image':'numeros/6.jpeg'},
+    {'number':'7', 'image':'numeros/7.jpeg'},
+    {'number':'8', 'image':'numeros/8.jpeg'},
+    {'number':'9', 'image':'numeros/9.jpeg'},
+    {'number':'10', 'image':'numeros/10.jpg'},
+    {'number':'11', 'image':'numeros/11.gif'},
+    {'number':'12', 'image':'numeros/12.gif'},
+    {'number':'13', 'image':'numeros/13.gif'},
+    {'number':'14', 'image':'numeros/14.gif'},
+    {'number':'15', 'image':'numeros/15.gif'},
+    {'number':'16', 'image':'numeros/16.gif'},
+    {'number':'17', 'image':'numeros/17.gif'},
+    {'number':'18', 'image':'numeros/18.gif'},
+    {'number':'19', 'image':'numeros/19.gif'},
+    {'number':'21', 'image':'numeros/21.gif'},
+    {'number':'22', 'image':'numeros/22.gif'},
+    {'number':'23', 'image':'numeros/23.gif'}
+];
+
 var active = 0; 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -103,6 +129,34 @@ function changeImage_days(id){
     paginationFiller_Days();
 }
 
+//Handle the image changes
+function changeImage_numbers(id) {
+    switch(id){
+        case "left":
+            if (active > 0) {
+                active -= 1;
+            } else {
+                active = numbers.length - 1;
+            }
+        break;
+
+        case "right":
+            if (active < numbers.length-1) {
+                active += 1;
+            } else {
+                active = 0;
+            }
+        break;
+
+        default:
+            active = parseInt(id, 10);
+        break;
+    }
+    document.getElementById("pages").innerHTML = "";
+    paginationFiller_numbers();
+   }
+
+
 //Generates the pagination for the letters
 function paginationFiller() {
     // Modifying an HTML element: adding an <li>
@@ -135,6 +189,22 @@ function paginationFiller_Days() {
     }
     var image = document.getElementById('day');
     image.src = days[active].image;
+}
+
+//Generates the pagination for the letters
+function paginationFiller_numbers() {
+    // Modifying an HTML element: adding an <li>
+    var liClass = "waves-effect";
+    for(var i = 0; i < numbers.length; i++) {
+        if(i == active){
+            liClass = "active blue";
+        } else {
+            liClass = "waves-effect";
+        }
+        document.getElementById("pages").innerHTML += '<li onclick="changeImage_numbers('+ i +')"jumpTo value= "'+ i +'" class="'+ liClass +'"><a href="#!">'+ numbers[i].number  +'</a></li>';
+    }
+    var image = document.getElementById('number');
+    image.src = numbers[active].image;
 }
 
 
