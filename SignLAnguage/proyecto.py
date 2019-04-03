@@ -79,7 +79,7 @@ class main:
         self.usuarioNuevo.set('')
         self.nuevaPassword.set('')
         self.logf.pack_forget()
-        self.head['text'] = '             CREAR CUENTA             '
+        self.head['text'] = '             CREAR CUENTA                    '
         self.crf.pack()
 
 
@@ -96,6 +96,7 @@ class main:
         Entry(self.logf,textvariable = self.password,bd = 5,font = ('',15),show = '*').grid(row=1,column=1)
         Button(self.logf,text = ' Crear cuenta ',bd = 3 ,font = ('',15),padx=5,pady=5,command=self.crear).grid()
         Button(self.logf,text = ' Login ',bd = 3 ,font = ('',15),padx=5,pady=5,command=self.login).grid(row=2,column=1)
+        #Button(self.logf,text = ' Ayuda ',bd = 3 ,font = ('',15),padx=5,pady=5,command=self.login).grid(row=3,column=1)
         self.logf.pack()
 
         #Datos para la ventana de crear usuarios
@@ -105,11 +106,11 @@ class main:
         Entry(self.crf,textvariable = self.usuarioNuevo,bd = 5,font = ('',15)).grid(row=0,column=1)
         Label(self.crf,text = 'Contraseña: ',font = ('',20),pady=5,padx=5, bg='white', fg='black').grid(sticky = W)
         Entry(self.crf,textvariable = self.nuevaPassword,bd = 5,font = ('',15),show = '*').grid(row=1,column=1)
-        Button(self.crf,text = 'Crear cuenta',bd = 3 ,font = ('',15),padx=5,pady=5,command=self.nuevoUsuario).grid()
-        Button(self.crf,text = 'Ir a Login',bd = 3 ,font = ('',15),padx=5,pady=5,command=self.log).grid(row=2,column=1)
+        Button(self.crf,text = 'Regresar',bd = 3 ,font = ('',15),padx=5,pady=5,command=self.log).grid()
+        Button(self.crf,text = 'Crear cuenta',bd = 3 ,font = ('',15),padx=5,pady=5,command=self.nuevoUsuario).grid(row=2,column=1)
 
 #crear la ventana
 root = Tk()
 main(root)
-root.resizable(width=False, height=Flase)
+root.resizable(width=False, height=False)
 root.mainloop()

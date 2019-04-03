@@ -52,7 +52,7 @@ var numbers = [
     {'number':'7', 'image':'numeros/7.jpeg'},
     {'number':'8', 'image':'numeros/8.jpeg'},
     {'number':'9', 'image':'numeros/9.jpeg'},
-    {'number':'10', 'image':'numeros/10.jpg'},
+    {'number':'10', 'image':'numeros/10.jpeg'},
     {'number':'11', 'image':'numeros/11.gif'},
     {'number':'12', 'image':'numeros/12.gif'},
     {'number':'13', 'image':'numeros/13.gif'},
@@ -172,7 +172,8 @@ function paginationFiller() {
     var image = document.getElementById('letter');
     var title = document.querySelector('.letter');
     image.src = letters[active].image;
-    title.innerText = letters[active].letter; 
+    console.log(letters[active].letter);
+    document.getElementById("title-item").innerText =  '"' + letters[active].letter + '"';
 }
 
 //Generates the pagination for the letters
@@ -189,6 +190,7 @@ function paginationFiller_Days() {
     }
     var image = document.getElementById('day');
     image.src = days[active].image;
+    document.getElementById("title-item").innerText =  '"' + days[active].day + '"';
 }
 
 //Generates the pagination for the letters
@@ -205,10 +207,5 @@ function paginationFiller_numbers() {
     }
     var image = document.getElementById('number');
     image.src = numbers[active].image;
+    document.getElementById("title-item").innerText =  '"' + numbers[active].number + '"';
 }
-
-
-/*
-<li class="active"><a href="#!">1</a></li>
-<li class="waves-effect"><a href="#!">2</a></li>
-*/

@@ -5,43 +5,49 @@
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
       <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+       <link type="text/css" rel="stylesheet" href="css/navBars.css"/>
 
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta charset="utf-8">
     </head>
 
-    <body onload="paginationFiller_numbers()">
+    <body onload="paginationFiller_numbers()  ">
 
-      <nav>
-        <div class="nav-wrapper blue">
-          <a href="#!" class="brand-logo">Numeros</a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a value="Cerrar ventana" onclick="window.close();">Cerrar Ventana</a></li>
-          </ul>
-        </div>
-      </nav>
+      <!--Page header-->
+		<!-- NAVBAR -->
+		<header>
+			<nav>
+				<div class="nav-wrapper blue">
+					<div class="row">
+						<div class="col s12">
+							<a href="#" data-target="sidenav-1" class="left sidenav-trigger hide-on-medium-and-up"><i class="material-icons">menu</i></a>
+							<a href="#" data-target="sidenav-2" class="right sidenav-trigger show-on-medium-and-up"><i class="material-icons">menu</i></a>
+							<a href="https://codepen.io/collection/nbBqgY" target="_blank" class="brand-logo">Números</a>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</header>
 
-      <div><h5>
-        Pagina web para mostrar lenguaje de señas
-      </div></h5>
+			
 
-      <!--Page Layout-->
-      <div class="row">
 
-        <div class="col s3">
-          <!--left NavBar-->
-          <ul id="slide-out" class="sidenav">
-            <li><div class="user-view">
-              <div class="backgound">
-                <img src="diasSemana/logo.jpg">
-              </div>
-              <a href="#user"><img class="circle" src="diasSemana/Lunes.jpg"></a>
-              <a href="#name"><span class="white-text name">PRUEBA DE NavBar</a></span>
-            </div></li>
-        </div>
+		<!-- LEFT SIDEBAR	 -->
+    <ul id="sidenav-1" class="sidenav sidenav-fixed">
+      <li><a class="subheader">¿Que quieres aprender?</a></li>
+      <li><a href="alfabeto.html" target="_blank">Alfabeto</a></li>
+      <li><a href="numeros.html" target="_blank">Números</a></li>
+      <li><a href="diasSemana.html" target="_blank">Dias de la semana</a></li>
+      <li><a href="ayuda.html" target="_blank">Ayuda</a></li>
 
-        <div class="col s9">
-          <!--Page content starts here-->
+    </ul>
+
+
+		<main>
+            <p class="white-text">A</p>
+      <label class="white-black"><center><h1 id="title-item">"A"</h1></center></label>
+      <p class="white-text">A</p>
           <div class="container">
             <center>
             <!--Image container-->
@@ -57,9 +63,9 @@
           </center>
           </ul>
           </center>
-        </div>
+</div>
 
-      </div>
+		</main>
 
 
       <!--JavaScript at end of body for optimized loading-->
